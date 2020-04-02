@@ -1,5 +1,8 @@
 """ if there are two elements with the same type like attack and use item, then use xpath.
-if there is only one submit type, then use 'input[type='submit'] in css selector"""
+if there is only one submit type, then use 'input[type='submit'] in css selector
+If you're here from reddit. Please note that I added all these explicityl_wait functions after trying a lot of things.
+I want the function to keep battling rebattling the opponenet until I manually stop the script from running.
+Also, this is an example account for the website."""
 def exphoarder():
     from selenium import webdriver
     browser = webdriver.Chrome(r'C:\Users\Blacktooth\Downloads\chromedriver_win32\chromedriver.exe')
@@ -7,14 +10,14 @@ def exphoarder():
     login = browser.find_element_by_class_name("login-header")
     login.click()
     username = browser.find_element_by_id("myusername")
-    username.send_keys("Gaalnikadni")
+    username.send_keys("trflying")
     password = browser.find_element_by_id("mypassword")
-    password.send_keys("nananana")
+    password.send_keys("trflying")
     submit = browser.find_element_by_id("submit")
     submit.click()
     browser.get("https://www.pokemon-vortex.com/battle-search/")
     training_account = browser.find_element_by_name("buser")
-    training_account.send_keys("TrainingKyurem")
+    training_account.send_keys("AvSteel")
     battle = browser.find_element_by_name("submitb")
     battle.click()
     browser.maximize_window()
